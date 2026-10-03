@@ -58,7 +58,7 @@ ThemeData buildTheme(bool isArabic) {
     colorScheme: scheme,
     textTheme: text.apply(bodyColor: AppColors.text, displayColor: AppColors.text),
     appBarTheme: const AppBarTheme(backgroundColor: Colors.transparent, elevation: 0, scrolledUnderElevation: 0),
-    cardTheme: CardTheme(color: AppColors.surface, elevation: 0, margin: EdgeInsets.zero, shape: RoundedRectangleBorder(borderRadius: AppRadii.rCard, side: const BorderSide(color: AppColors.border))),
+    cardTheme: CardThemeData(color: AppColors.surface, elevation: 0, margin: EdgeInsets.zero, shape: RoundedRectangleBorder(borderRadius: AppRadii.rCard, side: const BorderSide(color: AppColors.border))),
     inputDecorationTheme: InputDecorationTheme(
       filled: true, fillColor: AppColors.surfaceLo,
       hintStyle: const TextStyle(color: AppColors.muted),
