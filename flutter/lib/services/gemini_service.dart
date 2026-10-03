@@ -60,7 +60,7 @@ class GeminiService {
     Object? lastError;
     for (var attempt = 0; attempt < 3; attempt++) {
       try {
-        final res = await _model(module, lang, targetLanguage)
+        final res = await _model(module, lang, targetLanguage, level)
             .generateContent([Content.multi(parts)])
             .timeout(const Duration(seconds: 60));
         final text = res.text;
