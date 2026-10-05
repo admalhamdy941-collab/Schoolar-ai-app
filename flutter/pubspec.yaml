@@ -62,3 +62,4 @@ flutter:
     - .env
   flutter_tts: ^3.8.5
   flutter_tts: ^3.8.5
+  flutter_tts: ^3.8.5
