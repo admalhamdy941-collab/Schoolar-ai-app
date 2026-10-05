@@ -61,5 +61,5 @@ class StudyCubit extends Cubit<StudyState> {
   }
 
   void open(String id) => emit(state.copyWith(status: StudyStatus.success, current: _cache.session(id)));
-  void close() => emit(state.copyWith(status: StudyStatus.idle, clearCurrent: true));
+  Future<void> close() async => emit(state.copyWith(status: StudyStatus.idle, clearCurrent: true));
 }
