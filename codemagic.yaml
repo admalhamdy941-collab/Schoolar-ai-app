@@ -7,7 +7,8 @@ workflows:
     scripts:
       - name: Build Android APK
         script: |
-          flutter build apk --debug
+          flutter build apk --release
     artifacts:
-      - build/app/outputs/flutter-apk/*.apk
       - flutter/build/app/outputs/flutter-apk/*.apk
+      - build/app/outputs/flutter-apk/*.apk
+      - flutter/build/app/outputs/apk/release/*.apk
