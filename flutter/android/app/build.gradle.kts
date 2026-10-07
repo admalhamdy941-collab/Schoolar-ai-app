@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.scholar.scholar_ai"
-    compileSdk = 34
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
