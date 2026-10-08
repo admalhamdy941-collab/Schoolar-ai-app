@@ -33,10 +33,15 @@ jobs:
       - name: Build APK
         run: |
           cd flutter
-          flutter build apk --release
+          flutter build apk --release --no-tree-shake-icons
+
+      - name: Move APK to root
+        run: |
+          mkdir -p output_apk
+          find flutter/build -name "*.apk" -exec cp {} output_apk/ \;
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: schoolar-ai-app
-          path: flutter/build/app/outputs/flutter-apk/app-release.apk
+          path: output_apk/*.apk
