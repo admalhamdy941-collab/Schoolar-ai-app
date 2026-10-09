@@ -1,34 +1,34 @@
 name: scholar_ai
-description: "Scholar AI â€” AI-powered Student Productivity App (single-file, zero-dependency build)"
+description: "Scholar AI — AI-powered Student Productivity App (single-file, zero-dependency build)"
 publish_to: "none"
 version: 1.0.0+1
 
 environment:
   sdk: ">=3.4.0 <4.0.0"
 
-# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ─────────────────────────────────────────────────────────────────────────
 #  NO EXTERNAL PACKAGES.
-#  This project compiles with the Flutter SDK alone â€” `flutter pub get` has
+#  This project compiles with the Flutter SDK alone — `flutter pub get` has
 #  nothing to fetch, so there is no version-conflict or missing-package
 #  failure possible. Every feature the original multi-file build relied on
 #  has been reimplemented inside lib/main.dart using only Dart/Flutter:
 #
-#    hive / hive_flutter      â†’ CacheService   (in-memory + JSON file)
-#    flutter_bloc             â†’ ChangeNotifier + InheritedValue
-#    google_generative_ai     â†’ GeminiService  (dart:io HttpClient, REST)
-#    flutter_dotenv           â†’ _loadEnvFile() (dart:io File)
-#    connectivity_plus        â†’ ConnectivityController (InternetAddress.lookup)
-#    share_plus               â†’ ViralController.shareText (share sheet / clipboard)
-#    screenshot               â†’ RepaintBoundary.toImage + PNG encode
-#    syncfusion_flutter_pdf   â†’ extractPdfText() (pure Dart + ZLibCodec)
-#    receive_sharing_intent   â†’ ViralController.ingestSharedFile(path)
-#    in_app_review            â†’ FirebaseService.trackValueMoment()
-#    firebase_*               â†’ FirebaseService no-op facade
-#    image_picker             â†’ camera hook stub (text input works)
+#    hive / hive_flutter      → CacheService   (in-memory + JSON file)
+#    flutter_bloc             → ChangeNotifier + InheritedValue
+#    google_generative_ai     → GeminiService  (dart:io HttpClient, REST)
+#    flutter_dotenv           → _loadEnvFile() (dart:io File)
+#    connectivity_plus        → ConnectivityController (InternetAddress.lookup)
+#    share_plus               → ViralController.shareText (share sheet / clipboard)
+#    screenshot               → RepaintBoundary.toImage + PNG encode
+#    syncfusion_flutter_pdf   → extractPdfText() (pure Dart + ZLibCodec)
+#    receive_sharing_intent   → ViralController.ingestSharedFile(path)
+#    in_app_review            → FirebaseService.trackValueMoment()
+#    firebase_*               → FirebaseService no-op facade
+#    image_picker             → camera hook stub (text input works)
 #
 #  To restore any real plugin later, add it under `dependencies:` below and
-#  swap the matching section in lib/main.dart â€” the interfaces already match.
-# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+#  swap the matching section in lib/main.dart — the interfaces already match.
+# ─────────────────────────────────────────────────────────────────────────
 dependencies:
   flutter:
     sdk: flutter
@@ -40,7 +40,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  # `.env` is OPTIONAL â€” the app falls back to the `_kApiKey` constant in
+  # `.env` is OPTIONAL — the app falls back to the `_kApiKey` constant in
   # lib/main.dart. Only uncomment this if you actually create the file,
   # otherwise `flutter build` fails on a missing asset.
   # assets:
