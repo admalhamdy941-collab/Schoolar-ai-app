@@ -25,13 +25,21 @@ jobs:
         with:
           channel: 'stable'
 
-      - name: Build APK via Gradle Direct/Flutter
-        working-directory: flutter
+      - name: Install Dependencies
         run: |
+          cd flutter
           flutter pub get
-          flutter build apk --release --no-tree-shake-icons
-          mkdir -p ../output_apk
-          cp build/app/outputs/flutter-apk/*.apk ../output_apk/
+
+      - name: Build APK via Gradle Direct
+        run: |
+          cd flutter/android
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon
+
+      - name: Move APK to Root
+        run: |
+          mkdir -p output_apk
+          find flutter -name "*.apk" -exec cp {} output_apk/ \;
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
