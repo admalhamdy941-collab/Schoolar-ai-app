@@ -1,62 +1,26 @@
-name: scholar_ai
-description: "Scholar AI — AI-powered Student Productivity App (Gemini + Flutter)"
-publish_to: "none"
+name: schoolar_ai_app
+description: "A new Flutter project."
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.4.0 <4.0.0"
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-
-  # ── State management ────────────────────────────────────────────────
-  flutter_bloc: ^8.1.6
-  equatable: ^2.0.5
-
-  # ── Firebase: Remote Config · Analytics · Crashlytics ───────────────
-  firebase_core: ^3.6.0
-  firebase_remote_config: ^5.1.3
-  firebase_analytics: ^11.3.3
-  firebase_crashlytics: ^4.1.3
-
-  # ── Secure key management ───────────────────────────────────────────
-  flutter_dotenv: ^5.2.1
-
-  # ── Offline-first cache & history ───────────────────────────────────
-  hive: ^2.2.3
-  hive_flutter: ^1.1.0
-  path_provider: ^2.1.4
-
-  # ── Connectivity & offline indicators ───────────────────────────────
-  connectivity_plus: ^6.0.5
-
-  # ── Retention: in-app review & viral loops ──────────────────────────
-  in_app_review: ^2.0.10
-  share_plus: ^10.0.2
-  screenshot: ^3.0.0
-
-  # ── Direct document import (WhatsApp / Telegram share sheet) ────────
-  receive_sharing_intent: ^1.8.1
-  syncfusion_flutter_pdf: ^27.1.48
-
-  # ── Gemini + multimodal OCR ─────────────────────────────────────────
-  google_generative_ai: ^0.4.6
-  http: ^1.2.2
-  image_picker: ^1.1.2
-
-  # ── UI ──────────────────────────────────────────────────────────────
-  google_fonts: ^6.2.1
-  intl: ^0.19.0
+  cupertino_icons: ^1.0.8
+  flutter_tts: ^4.0.2
+  firebase_core: ^3.1.0
+  firebase_analytics: ^11.0.0
+  firebase_remote_config: ^5.0.0
+  share_plus: ^10.0.0
+  in_app_review: ^2.0.9
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
-  hive_generator: ^2.0.1
-  build_runner: ^2.4.12
 
 flutter:
   uses-material-design: true
-  assets:
-    - .env
